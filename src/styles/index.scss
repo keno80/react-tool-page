@@ -1,0 +1,10 @@
+@import './normalize.css';
+
+@font-face {
+  font-family: Harmony Sans Regular;
+  src: url(@/assets/fonts/Harmony-Sans-Regular.woff2);
+}
+
+body {
+  font-family: Harmony Sans Regular;
+}

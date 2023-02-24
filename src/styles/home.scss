@@ -1,0 +1,63 @@
+.homepage {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+
+  .hm_img {
+    height: 100%;
+    background-image: url(@/assets/images/bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: img 2s ease-in-out;
+  }
+
+  .hm_content {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    color: #fff;
+
+    .one_sentence {
+      position: absolute;
+      left: 50%;
+      top: 30%;
+      transform: translate(-50%, -50%);
+      display: inline-block;
+
+      &::after {
+        content: '';
+        display: inline-block;
+        width: 0.6em;
+        vertical-align: text-bottom;
+        border-bottom: 2px solid white;
+        margin-left: 6px;
+        animation: flicker 0.5s linear infinite;
+      }
+    }
+  }
+}
+
+// 图片缩放模糊动画
+@keyframes img {
+  0% {
+    filter: blur(10px);
+    transform: scale(1.2);
+  }
+  100% {
+    filter: blur(0);
+    transform: scale(1);
+  }
+}
+
+// 光标闪动
+@keyframes flicker {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
