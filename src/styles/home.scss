@@ -8,6 +8,8 @@
     background-image: url(@/assets/images/bg.png);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
     animation: img 2s ease-in-out;
   }
 
