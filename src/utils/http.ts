@@ -1,7 +1,8 @@
 import axios from 'axios'
 import type { InternalAxiosRequestConfig, AxiosRequestConfig, AxiosResponse, AxiosError } from 'axios'
 
-const baseURL = 'http://localhost:7001'
+// const baseURL = 'http://localhost:7001'
+const baseURL = 'https://midway.chkai.cn/'
 
 const instance = axios.create({
   baseURL,

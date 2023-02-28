@@ -1,20 +1,19 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
+import { getSentence } from '@/api/open'
 import '@/styles/home.scss'
 
-const text = '指引梦想的灯塔'
-
-const autoType = () => {
+const autoType = (sentence: string) => {
   let str = ''
   let index = 0
   const textBox = document.getElementsByClassName('one_sentence')
 
   const timer = setInterval(() => {
-    if (index > text.length - 1) {
+    if (index > sentence.length - 1) {
       clearInterval(timer)
       return
     }
 
-    str = str + text.substring(index, index + 1)
+    str = str + sentence.substring(index, index + 1)
     textBox[0].innerHTML = str
     index++
   }, 200)
@@ -22,9 +21,10 @@ const autoType = () => {
 
 const Home = () => {
   useEffect(() => {
-    autoType()
-  })
-
+    getSentence().then((res) => {
+      autoType(res.data.hitokoto)
+    })
+  }, [])
   return (
     <div className='homepage'>
       <div className='hm_img' />
