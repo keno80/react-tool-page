@@ -3,8 +3,6 @@ import { IRoutes } from '@/types/router'
 
 const routes: Record<string, any> = import.meta.glob('./modules/*.ts', { eager: true })
 
-console.log(routes)
-
 const allRouter: IRoutes[] = []
 Object.keys(routes).forEach((item) => {
   Object.keys(routes[item]).forEach((key) => {

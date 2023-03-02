@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { getSentence } from '@/api/open'
 import '@/styles/home.scss'
+import Clock from '@/components/ClockStyle'
 
 const autoType = (sentence: string) => {
   let str = ''
@@ -26,10 +27,11 @@ const Home = () => {
     })
   }, [])
   return (
-    <div className='homepage'>
-      <div className='hm_img' />
-      <div className='hm_content'>
-        <div className='one_sentence'></div>
+    <div className="homepage">
+      <div className="hm_img" />
+      <div className="hm_content">
+        <Clock></Clock>
+        <div className="one_sentence"></div>
       </div>
     </div>
   )
