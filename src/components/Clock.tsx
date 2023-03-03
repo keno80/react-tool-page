@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import '@/styles/clock.scss'
-import config from './Clock'
+import config from './ClockConfig'
 
 const Num = (props: any) => {
   return (
@@ -22,7 +22,7 @@ const Num = (props: any) => {
   )
 }
 
-const NumTop = () => {
+const Clock = () => {
   const hours = () => {
     return Array.from(
       new Date().getHours() < 10
@@ -71,4 +71,4 @@ const NumTop = () => {
   )
 }
 
-export default NumTop
+export default Clock
