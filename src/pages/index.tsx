@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { getSentence } from '@/api/open'
 import '@/styles/home.scss'
 import Clock from '@/components/Clock'
