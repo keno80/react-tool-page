@@ -1,17 +1,5 @@
-.dot {
-  width: .3rem;
-  height: .3rem;
-  border-radius: .15rem;
-  background-color: rgba(255, 255, 255, .8);
-  margin: .1rem;
-}
-
-.dotbox {
-  display: flex;
-}
-
 .dots {
-  padding: .4rem;
+  padding: .3rem;
   margin: 1rem 2rem 0;
   float: right;
   border-radius: 1.1rem;
@@ -20,5 +8,83 @@
   &:active {
     cursor: pointer;
     background-color: rgba(108, 108, 108, 0.3);
+  }
+
+  .dotbox {
+    display: flex;
+
+    .dot {
+      width: .3rem;
+      height: .3rem;
+      border-radius: .15rem;
+      background-color: rgba(255, 255, 255, .8);
+      margin: .1rem;
+    }
+  }
+}
+
+.Tab_back {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 100;
+  animation: gradient 1s linear;
+}
+
+.Tab_outline {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+
+
+  .Tab {
+    width: 70vw;
+    height: 80vh;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    color: rgba(0, 0, 0, 1);
+    z-index: 101;
+
+    .Title {
+      display: flex;
+      justify-content: center;
+    }
+
+    .Tab_main {
+      display: flex;
+    }
+  }
+}
+
+.Animate1 {
+  animation: bigger .5s linear;
+}
+
+@keyframes bigger {
+  0% {
+    transform: translateY(100vh);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  40% {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    background-color: rgba(0, 0, 0, .4);
   }
 }
