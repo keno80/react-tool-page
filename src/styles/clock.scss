@@ -1,0 +1,53 @@
+.t,.m,.b{
+  width: 3rem;
+  height: .6rem;
+  background-color: rgba(255, 255, 255,.8);
+  clip-path: polygon(0 0, 20% 100%, 80% 100%, 100% 0);
+}
+.l,.r{
+  width: .6rem;
+  height: 3rem;
+  background-color: rgba(255, 255, 255,.8);
+  clip-path: polygon(0 0, 0 100%, 100% 80%, 100% 20%);
+}
+.m{
+  clip-path: polygon(20% 0, 0 50%, 20% 100%, 80% 100%, 100% 50%,80% 0);
+  top: -.75rem;
+}
+.m,.b,.top1,.top2{
+  position: relative;
+}
+.top1{
+  top:-.45rem
+}
+.top2{
+  top:-1.05rem
+}
+.b{
+  top:-1.5rem;
+}
+.r,.b{
+  transform: rotate(180deg);
+}
+.line{
+  display: flex;
+  width: 3rem;
+  justify-content: space-between;
+}
+.trans{
+  opacity: 0;
+}
+.num{
+  margin: .5rem;
+}
+
+//时间样式
+.timer{
+  display: flex;
+  justify-content: center;
+  margin: 6rem 0 0;
+  .comu{
+    font-size: 5rem;
+    color: rgba(255, 255, 255,.8);
+  }
+}

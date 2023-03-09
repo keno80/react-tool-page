@@ -1,6 +1,8 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { getSentence } from '@/api/open'
 import '@/styles/home.scss'
+import Clock from '@/components/Clock'
+import Tabbar from '@/components/Tabbar'
 
 const autoType = (sentence: string) => {
   let str = ''
@@ -26,10 +28,12 @@ const Home = () => {
     })
   }, [])
   return (
-    <div className='homepage'>
-      <div className='hm_img' />
-      <div className='hm_content'>
-        <div className='one_sentence'></div>
+    <div className="homepage">
+      <div className="hm_img" />
+      <div className="hm_content">
+        <Tabbar></Tabbar>
+        <Clock></Clock>
+        <div className="one_sentence"></div>
       </div>
     </div>
   )
